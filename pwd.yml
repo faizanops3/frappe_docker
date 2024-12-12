@@ -80,6 +80,7 @@ services:
       done;
       echo "sites/common_site_config.json found";
       bench new-site --mariadb-user-host-login-scope='%' --admin-password=admin --db-root-username=root --db-root-password=admin --install-app erpnext --install-app webshop --install-app builder --install-app payments --install-app go1_webshop frontend;
+      bench new-site --mariadb-user-host-login-scope='%' --admin-password=admin --db-root-username=root --db-root-password=admin --install-app erpnext --install-app webshop --install-app builder --install-app payments --install-app go1_webshop work;
 
     # bench new-site --mariadb-user-host-login-scope='%' --admin-password=admin --db-root-username=root --db-root-password=admin --install-app erpnext --set-default frontend;
 
