@@ -1,10 +1,8 @@
 version: "3"
 
-# Image previous: faizan44/frapee-go:1.0.1
-
 services:
   backend:
-    image: neww:1.0.2
+    image: faizan44/frapee-go:1.0.2
     networks:
       - frappe_network
     deploy:
@@ -20,7 +18,7 @@ services:
       MARIADB_ROOT_PASSWORD: admin
 
   configurator:
-    image: neww:1.0.2
+    image: faizan44/frapee-go:1.0.2
     networks:
       - frappe_network
     deploy:
@@ -49,7 +47,7 @@ services:
       - logs:/home/frappe/frappe-bench/logs
 
   create-site:
-    image: neww:1.0.2
+    image: faizan44/frapee-go:1.0.2
     networks:
       - frappe_network
     deploy:
@@ -110,7 +108,7 @@ services:
       - db-data:/var/lib/mysql
 
   frontend:
-    image: neww:1.0.2
+    image: faizan44/frapee-go:1.0.2
     networks:
       - frappe_network
     depends_on:
@@ -136,7 +134,7 @@ services:
       - "8080:8080"
 
   queue-long:
-    image: neww:1.0.2
+    image: faizan44/frapee-go:1.0.2
     networks:
       - frappe_network
     deploy:
@@ -152,7 +150,7 @@ services:
       - logs:/home/frappe/frappe-bench/logs
 
   queue-short:
-    image: neww:1.0.2
+    image: faizan44/frapee-go:1.0.2
     networks:
       - frappe_network
     deploy:
@@ -188,7 +186,7 @@ services:
       - redis-cache-data:/data
 
   scheduler:
-    image: neww:1.0.2
+    image: faizan44/frapee-go:1.0.2
     networks:
       - frappe_network
     deploy:
@@ -202,7 +200,7 @@ services:
       - logs:/home/frappe/frappe-bench/logs
 
   websocket:
-    image: neww:1.0.2
+    image: faizan44/frapee-go:1.0.2
     networks:
       - frappe_network
     deploy:
