@@ -121,7 +121,7 @@ docker build \
   --build-arg=PYTHON_VERSION=3.11.9 \
   --build-arg=NODE_VERSION=20.9.0 \
   --build-arg=APPS_JSON_BASE64=Ww0KICB7DQogICAgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vZnJhcHBlL2VycG5leHQiLA0KICAgICJicmFuY2giOiAiZGV2ZWxvcCINCiAgfSwNCiAgew0KICAgICJ1cmwiOiAiaHR0cHM6Ly9naXRodWIuY29tL2ZyYXBwZS9wYXltZW50cyIsDQogICAgImJyYW5jaCI6ICJkZXZlbG9wIg0KICB9LA0KICB7DQogICAgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vZnJhcHBlL3dlYnNob3AiLA0KICAgICJicmFuY2giOiAiZGV2ZWxvcCINCiAgfSwNCiAgew0KICAgICJ1cmwiOiAiaHR0cHM6Ly9naXRodWIuY29tL2ZyYXBwZS9idWlsZGVyIiwNCiAgICAiYnJhbmNoIjogImRldmVsb3AiDQogIH0sDQogIHsNCiAgICAidXJsIjogImh0dHBzOi8vZ2l0aHViLmNvbS9Ucmlkb3RzVGVjaC9HbzEtV2Vic2hvcCIsDQogICAgImJyYW5jaCI6ICJtYXN0ZXIiDQogIH0NCl0NCg== \
-  --tag=faizan44/frapee-go:1.0.4 \
+  --tag=faizan44/frapee-go:1.0.5 \
   --file=images/custom/Containerfile .
 ```
 

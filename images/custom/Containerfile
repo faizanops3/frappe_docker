@@ -7,11 +7,11 @@ COPY resources/nginx-entrypoint.sh /usr/local/bin/nginx-entrypoint.sh
 
 
 ## for windows
-# RUN sed -i 's/\r$//' /usr/local/bin/nginx-entrypoint.sh && \
-#   chmod 755 /usr/local/bin/nginx-entrypoint.sh
+RUN sed -i 's/\r$//' /usr/local/bin/nginx-entrypoint.sh && \
+  chmod 755 /usr/local/bin/nginx-entrypoint.sh
 
 ## for linux
-RUN chmod 755 /usr/local/bin/nginx-entrypoint.sh
+# RUN chmod 755 /usr/local/bin/nginx-entrypoint.sh
 
 ARG WKHTMLTOPDF_VERSION=0.12.6.1-3
 ARG WKHTMLTOPDF_DISTRO=bookworm
