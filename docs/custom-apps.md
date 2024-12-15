@@ -117,11 +117,11 @@ docker build \
 ```shell
 docker build \
   --build-arg=FRAPPE_PATH=https://github.com/frappe/frappe \
-  --build-arg=FRAPPE_BRANCH=version-15 \
+  --build-arg=FRAPPE_BRANCH=develop \
   --build-arg=PYTHON_VERSION=3.11.9 \
-  --build-arg=NODE_VERSION=18.20.2 \
-  --build-arg=APPS_JSON_BASE64=Ww0KICB7DQogICAgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vZnJhcHBlL2VycG5leHQiLA0KICAgICJicmFuY2giOiAidmVyc2lvbi0xNSINCiAgfSwNCiAgew0KICAgICJ1cmwiOiAiaHR0cHM6Ly9naXRodWIuY29tL2ZyYXBwZS9wYXltZW50cyIsDQogICAgImJyYW5jaCI6ICJ2ZXJzaW9uLTE1Ig0KICB9LA0KICB7DQogICAgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vZnJhcHBlL3dlYnNob3AiLA0KICAgICJicmFuY2giOiAidmVyc2lvbi0xNSINCiAgfSwNCiAgew0KICAgICJ1cmwiOiAiaHR0cHM6Ly9naXRodWIuY29tL2ZyYXBwZS9idWlsZGVyIiwNCiAgICAiYnJhbmNoIjogImRldmVsb3AiDQogIH0sDQogIHsNCiAgICAidXJsIjogImh0dHBzOi8vZ2l0aHViLmNvbS9Ucmlkb3RzVGVjaC9HbzEtV2Vic2hvcCIsDQogICAgImJyYW5jaCI6ICJtYXN0ZXIiDQogIH0NCl0NCg== \
-  --tag=faizan44/frapee-go:1.0.3 \
+  --build-arg=NODE_VERSION=20.9.0 \
+  --build-arg=APPS_JSON_BASE64=Ww0KICB7DQogICAgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vZnJhcHBlL2VycG5leHQiLA0KICAgICJicmFuY2giOiAiZGV2ZWxvcCINCiAgfSwNCiAgew0KICAgICJ1cmwiOiAiaHR0cHM6Ly9naXRodWIuY29tL2ZyYXBwZS9wYXltZW50cyIsDQogICAgImJyYW5jaCI6ICJkZXZlbG9wIg0KICB9LA0KICB7DQogICAgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vZnJhcHBlL3dlYnNob3AiLA0KICAgICJicmFuY2giOiAiZGV2ZWxvcCINCiAgfSwNCiAgew0KICAgICJ1cmwiOiAiaHR0cHM6Ly9naXRodWIuY29tL2ZyYXBwZS9idWlsZGVyIiwNCiAgICAiYnJhbmNoIjogImRldmVsb3AiDQogIH0sDQogIHsNCiAgICAidXJsIjogImh0dHBzOi8vZ2l0aHViLmNvbS9Ucmlkb3RzVGVjaC9HbzEtV2Vic2hvcCIsDQogICAgImJyYW5jaCI6ICJtYXN0ZXIiDQogIH0NCl0NCg== \
+  --tag=faizan44/frapee-go:1.0.4 \
   --file=images/custom/Containerfile .
 ```
 
