@@ -1,0 +1,8 @@
+export EMAIL=faizanops@example.com
+export TRAEFIK_DOMAIN=traefik.devpath.xyz
+
+
+
+export HASHED_PASSWORD=$(openssl passwd -apr1)
+
+admin123
