@@ -124,7 +124,7 @@ services:
       SOCKETIO: websocket:9000
       UPSTREAM_REAL_IP_ADDRESS: 20.40.49.97
       UPSTREAM_REAL_IP_HEADER: X-Forwarded-For
-      UPSTREAM_REAL_IP_RECURSIVE: "on"
+      UPSTREAM_REAL_IP_RECURSIVE: "off"
       PROXY_READ_TIMEOUT: 120
       CLIENT_MAX_BODY_SIZE: 50m
     volumes:
