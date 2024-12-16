@@ -34,7 +34,8 @@ export APPS_JSON_BASE64=$(base64 -w 0 /path/to/apps.json)
 ```
 
 ```shell
-export APPS_JSON_BASE64=$(base64 -w 0 apps.json > bb)
+export APPS_JSON_BASE64=$(base64 -w 0 apps.json > aa)
+export APPS_JSON_BASE64=$(base64 -w 0 bench.json > bb)
 ```
 
 Test the Previous Step: Decode the Base64-encoded Environment Variable
@@ -124,7 +125,7 @@ docker build \
   --build-arg=FRAPPE_BRANCH=version-15 \
   --build-arg=PYTHON_VERSION=3.12.8 \
   --build-arg=NODE_VERSION=20.9.0 \
-  --build-arg=APPS_JSON_BASE64=Ww0KICB7DQogICAgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vZnJhcHBlL3BheW1lbnRzIiwNCiAgICAiYnJhbmNoIjogInZlcnNpb24tMTUiDQogIH0sDQogIHsNCiAgICAidXJsIjogImh0dHBzOi8vZ2l0aHViLmNvbS9mcmFwcGUvZXJwbmV4dCIsDQogICAgImJyYW5jaCI6ICJ2ZXJzaW9uLTE1Ig0KICB9LA0KICB7DQogICAgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vZnJhcHBlL3dlYnNob3AiLA0KICAgICJicmFuY2giOiAidmVyc2lvbi0xNSINCiAgfSwNCiAgew0KICAgICJ1cmwiOiAiaHR0cHM6Ly9naXRodWIuY29tL2ZyYXBwZS9idWlsZGVyIiwNCiAgICAiYnJhbmNoIjogIm1hc3RlciINCiAgfSwNCiAgew0KICAgICJ1cmwiOiAiaHR0cHM6Ly9naXRodWIuY29tL1RyaWRvdHNUZWNoL0dvMS1XZWJzaG9wIiwNCiAgICAiYnJhbmNoIjogIm1hc3RlciINCiAgfQ0KXQ0K \
+  --build-arg=APPS_JSON_BASE64=$(cat images/custom/aa) \
   --tag=faizan44/frapee-go:1.0.7 \
   --file=images/custom/Containerfile .
 ```

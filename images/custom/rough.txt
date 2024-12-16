@@ -6,3 +6,28 @@ export TRAEFIK_DOMAIN=traefik.devpath.xyz
 export HASHED_PASSWORD=$(openssl passwd -apr1)
 
 admin123
+
+
+
+
+export PORTAINER_DOMAIN=portainer.devpath.xyz
+
+admin123456789
+
+
+
+
+
+
+
+http://<my-public-ip>:9000/socket.io/?EIO=4&transport=polling&t=PFDwx3g net::ERR_CONNECTION_REFUSED
+
+
+builder.api.get_page_preview_html:14 GET http://<my-public-ip>/assets/builder/reset.css?v=1 net::ERR_CONNECTION_REFUSED
+
+
+http://<my-public-ip>:9000/socket.io/?EIO=4&transport=polling&t=PFEC-yJ
+
+
+
+
