@@ -37,6 +37,7 @@ export APPS_JSON_BASE64=$(base64 -w 0 /path/to/apps.json)
 
 ```shell
 base64 -w 0 apps.json > APPS_JSON_BASE64
+base64 -w 0 cc.json > cc
 ```
 
 Test the Previous Step: Decode the Base64-encoded Environment Variable
@@ -109,12 +110,27 @@ docker build \
 
 ```shell
 docker build \
+  --no-cache \
   --build-arg=FRAPPE_PATH=https://github.com/frappe/frappe \
   --build-arg=FRAPPE_BRANCH=version-15 \
   --build-arg=PYTHON_VERSION=3.12.8 \
-  --build-arg=NODE_VERSION=20.9.0 \
+  --build-arg=NODE_VERSION=20.18.1 \
   --build-arg=APPS_JSON_BASE64=$(cat images/custom/APPS_JSON_BASE64) \
-  --tag=faizan44/frapee-go:1.0.6 \
+  --tag=faizan44/frapee-go:1.0.7 \
+  --file=images/custom/Containerfile .
+```
+
+#### cloud
+
+```shell
+docker build \
+  --no-cache \
+  --build-arg=FRAPPE_PATH=https://github.com/frappe/frappe \
+  --build-arg=FRAPPE_BRANCH=version-15 \
+  --build-arg=PYTHON_VERSION=3.11.9 \
+  --build-arg=NODE_VERSION=18.20.2 \
+  --build-arg=APPS_JSON_BASE64=$(cat images/custom/cloud) \
+  --tag=faizan44/frapee-cloud:1.0.0 \
   --file=images/custom/Containerfile .
 ```
 
