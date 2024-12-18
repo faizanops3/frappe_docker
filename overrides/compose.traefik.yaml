@@ -45,3 +45,5 @@ networks:
   traefik-public:
     name: traefik-public
     external: false
+    driver_opts:
+      com.docker.network.driver.mtu: 1400

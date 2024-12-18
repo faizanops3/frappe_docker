@@ -65,7 +65,7 @@ Create a file called `traefik.env` in `~/gitops`
 ```shell
 echo 'TRAEFIK_DOMAIN=traefik.devpath.xyz' > ~/gitops/traefik.env
 echo 'EMAIL=admin@devpath.xyz' >> ~/gitops/traefik.env
-echo 'HASHED_PASSWORD='$(openssl passwd -apr1 faizan@123 | sed -e s/\\$/\\$\\$/g) >> ~/gitops/traefik.env
+echo 'HASHED_PASSWORD='$(openssl passwd -apr1 Faizan@1234 | sed -e s/\\$/\\$\\$/g) >> ~/gitops/traefik.env
 ```
 
 ### Docker settings change
@@ -81,6 +81,10 @@ edited
 ```
 ExecStart=/usr/bin/dockerd --mtu 1400 -H fd:// --containerd=/run/containerd/containerd.sock
 ```
+
+---
+
+this in traefik.yaml and compose.mariadb-shared.yaml
 
 ```yml
 networks:

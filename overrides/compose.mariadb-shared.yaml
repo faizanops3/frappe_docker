@@ -25,6 +25,8 @@ networks:
   mariadb-network:
     name: mariadb-network
     external: false
+    driver_opts:
+      com.docker.network.driver.mtu: 1400
 
 volumes:
   db-data:
