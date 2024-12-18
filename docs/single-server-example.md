@@ -44,7 +44,7 @@ chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
 Clone `frappe_docker` repo for the needed YAMLs and change the current working directory of your shell to the cloned repo.
 
 ```shell
-git clone https://github.com/frappe/frappe_docker
+git clone https://github.com/faizanops3/frappe_docker
 cd frappe_docker
 ```
 
@@ -63,9 +63,32 @@ Basic Traefik setup using docker compose.
 Create a file called `traefik.env` in `~/gitops`
 
 ```shell
-echo 'TRAEFIK_DOMAIN=traefik.example.com' > ~/gitops/traefik.env
-echo 'EMAIL=admin@example.com' >> ~/gitops/traefik.env
-echo 'HASHED_PASSWORD='$(openssl passwd -apr1 changeit | sed -e s/\\$/\\$\\$/g) >> ~/gitops/traefik.env
+echo 'TRAEFIK_DOMAIN=traefik.devpath.xyz' > ~/gitops/traefik.env
+echo 'EMAIL=admin@devpath.xyz' >> ~/gitops/traefik.env
+echo 'HASHED_PASSWORD='$(openssl passwd -apr1 faizan@123 | sed -e s/\\$/\\$\\$/g) >> ~/gitops/traefik.env
+```
+
+### Docker settings change
+
+original
+
+```
+ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+```
+
+edited
+
+```
+ExecStart=/usr/bin/dockerd --mtu 1400 -H fd:// --containerd=/run/containerd/containerd.sock
+```
+
+```yml
+networks:
+  traefik-public:
+    name: traefik-public
+    external: false
+    driver_opts:
+      com.docker.network.driver.mtu: 1400
 ```
 
 Note:
@@ -77,8 +100,8 @@ Note:
 env file generated at location `~/gitops/traefik.env` will look like following:
 
 ```env
-TRAEFIK_DOMAIN=traefik.example.com
-EMAIL=admin@example.com
+TRAEFIK_DOMAIN=traefik.devpath.xyz
+EMAIL=admin@devpath.xyz
 HASHED_PASSWORD=$apr1$K.4gp7RT$tj9R2jHh0D4Gb5o5fIAzm/
 ```
 
