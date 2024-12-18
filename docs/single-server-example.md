@@ -204,7 +204,7 @@ Create sites `one.example.com` and `two.example.com`:
 ```shell
 # one.example.com
 docker compose --project-name erpnext-one exec backend \
-  bench new-site --mariadb-user-host-login-scope=% --db-root-password changeit --install-app erpnext --admin-password changeit one.example.com
+  bench new-site --mariadb-user-host-login-scope=% --db-root-password changeit --install-app erpnext --install-app payments --install-app webshop --install-app builder --admin-password changeit one.devpath.xyz
 ```
 
 You can stop here and have a single bench single site setup complete. Continue to add one more site to the current bench.
@@ -212,7 +212,7 @@ You can stop here and have a single bench single site setup complete. Continue t
 ```shell
 # two.example.com
 docker compose --project-name erpnext-one exec backend \
-  bench new-site --mariadb-user-host-login-scope=% --db-root-password changeit --install-app erpnext --admin-password changeit two.example.com
+  bench new-site --mariadb-user-host-login-scope=% --db-root-password changeit --install-app erpnext --install-app payments --install-app webshop --install-app builder --admin-password changeit two.devpath.xyz
 ```
 
 #### Create second bench
