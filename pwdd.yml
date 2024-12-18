@@ -23,7 +23,7 @@ services:
       - frappe_network
     deploy:
       restart_policy:
-        condition: none
+        condition: no
     entrypoint:
       - bash
       - -c
@@ -52,7 +52,7 @@ services:
       - frappe_network
     deploy:
       restart_policy:
-        condition: none
+        condition: no
     volumes:
       - sites:/home/frappe/frappe-bench/sites
       - logs:/home/frappe/frappe-bench/logs
