@@ -14,9 +14,5 @@
   {
     "url": "https://github.com/frappe/builder",
     "branch": "master"
-  },
-  {
-    "url": "https://github.com/TridotsTech/Go1-Webshop",
-    "branch": "master"
   }
 ]

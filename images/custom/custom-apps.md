@@ -106,7 +106,7 @@ docker build \
   --file=images/custom/Containerfile .
 ```
 
-#### With Go1
+#### My-image
 
 ```shell
 docker build \
@@ -116,7 +116,7 @@ docker build \
   --build-arg=PYTHON_VERSION=3.12.8 \
   --build-arg=NODE_VERSION=20.18.1 \
   --build-arg=APPS_JSON_BASE64=$(cat images/custom/APPS_JSON_BASE64) \
-  --tag=faizan44/frapee-go:1.0.7 \
+  --tag=faizan44/frapee-go:1.0.8 \
   --file=images/custom/Containerfile .
 ```
 
