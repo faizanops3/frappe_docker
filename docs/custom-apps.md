@@ -33,6 +33,8 @@ Generate base64 string from json file:
 export APPS_JSON_BASE64=$(base64 -w 0 /path/to/apps.json)
 ```
 
+Ww0KICB7DQogICAgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vZnJhcHBlL2VycG5leHQiLA0KICAgICJicmFuY2giOiAidmVyc2lvbi0xNSINCiAgfQ0KXQ0K
+
 Test the Previous Step: Decode the Base64-encoded Environment Variable
 
 To verify the previous step, decode the `APPS_JSON_BASE64` environment variable (which is Base64-encoded) into a JSON file. Follow the steps below:
@@ -87,6 +89,17 @@ docker build \
 This method builds the base and build layer every time, it allows to customize Python and NodeJS runtime versions. It takes more time to build.
 
 It uses `images/custom/Containerfile`.
+
+```shell
+sudo docker build \
+  --build-arg=FRAPPE_PATH=https://github.com/frappe/frappe \
+  --build-arg=FRAPPE_BRANCH=version-15 \
+  --build-arg=PYTHON_VERSION=3.11.9 \
+  --build-arg=NODE_VERSION=18.20.2 \
+  --build-arg=APPS_JSON_BASE64=$APPS_JSON_BASE64 \
+  --tag=faizan44/erpnext:v17 \
+  --file=images/custom/Containerfile .
+```
 
 ```shell
 docker build \
