@@ -98,9 +98,9 @@ sudo docker build \
   --build-arg=FRAPPE_BRANCH=version-15 \
   --build-arg=PYTHON_VERSION=3.11.9 \
   --build-arg=NODE_VERSION=18.20.2 \
-  --build-arg=APPS_JSON_BASE64=$APPS_JSON_BASE64 \
-  --tag=faizan44/erpnext:v17 \
-  --file=images/custom/Containerfile .
+  --build-arg=APPS_JSON_BASE64=WwogIHsKICAgICJ1cmwiOiAiaHR0cHM6Ly9naXRodWIuY29tL2ZyYXBwZS9lcnBuZXh0IiwKICAgICJicmFuY2giOiAidmVyc2lvbi0xNSIKICB9LAogIHsKICAgICJ1cmwiOiAiaHR0cHM6Ly9naXRodWIuY29tL3Jlc2lsaWVudC10ZWNoL2luZGlhLWNvbXBsaWFuY2UiLAogICAgImJyYW5jaCI6ICJ2ZXJzaW9uLTE1IgogIH0sCiAgewogICAgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vZnJhcHBlL2NybSIsCiAgICAiYnJhbmNoIjogIm1haW4iCiAgfSwKICB7CiAgICAidXJsIjogImh0dHBzOi8vZ2l0aHViLmNvbS9mcmFwcGUvbG1zIiwKICAgICJicmFuY2giOiAibWFpbiIKICB9Cl0K \
+  --tag=faizan44/erpnext:v18 \
+  --file=images/custom/Containerfilemy .
 ```
 
 ```shell
