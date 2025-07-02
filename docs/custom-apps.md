@@ -29,8 +29,10 @@ Note:
 
 Generate base64 string from json file:
 
+go inside docs dir.
+
 ```shell
-export APPS_JSON_BASE64=$(base64 -w 0 /path/to/apps.json)
+export APPS_JSON_BASE64=$(base64 -w 0 apps.json)
 ```
 
 Ww0KICB7DQogICAgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vZnJhcHBlL2VycG5leHQiLA0KICAgICJicmFuY2giOiAidmVyc2lvbi0xNSINCiAgfQ0KXQ0K
