@@ -35,7 +35,11 @@ scp the apps.json in the vm first. and clone the official repo.
 export APPS_JSON_BASE64=$(base64 -w 0 apps.json)
 ```
 
-Ww0KICB7DQogICAgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vZnJhcHBlL2VycG5leHQiLA0KICAgICJicmFuY2giOiAidmVyc2lvbi0xNSINCiAgfQ0KXQ0K
+check
+
+```sh
+echo $APPS_JSON_BASE64
+```
 
 Test the Previous Step: Decode the Base64-encoded Environment Variable
 
@@ -88,6 +92,11 @@ docker build \
 
 ### Custom build image
 
+```shell
+git clone https://github.com/faizanops3/frappe_docker.git
+cd frappe_docker
+```
+
 This method builds the base and build layer every time, it allows to customize Python and NodeJS runtime versions. It takes more time to build.
 
 It uses `images/custom/Containerfile`.
@@ -98,9 +107,9 @@ sudo docker build \
   --build-arg=FRAPPE_BRANCH=version-15 \
   --build-arg=PYTHON_VERSION=3.11.9 \
   --build-arg=NODE_VERSION=18.20.2 \
-  --build-arg=APPS_JSON_BASE64=WwogIHsKICAgICJ1cmwiOiAiaHR0cHM6Ly9naXRodWIuY29tL2ZyYXBwZS9lcnBuZXh0IiwKICAgICJicmFuY2giOiAidmVyc2lvbi0xNSIKICB9LAogIHsKICAgICJ1cmwiOiAiaHR0cHM6Ly9naXRodWIuY29tL3Jlc2lsaWVudC10ZWNoL2luZGlhLWNvbXBsaWFuY2UiLAogICAgImJyYW5jaCI6ICJ2ZXJzaW9uLTE1IgogIH0sCiAgewogICAgInVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vZnJhcHBlL2NybSIsCiAgICAiYnJhbmNoIjogIm1haW4iCiAgfSwKICB7CiAgICAidXJsIjogImh0dHBzOi8vZ2l0aHViLmNvbS9mcmFwcGUvbG1zIiwKICAgICJicmFuY2giOiAibWFpbiIKICB9Cl0K \
+  --build-arg=APPS_JSON_BASE64=$APPS_JSON_BASE64 \
   --tag=faizan44/erpnext:v18 \
-  --file=images/custom/Containerfilemy .
+  --file=images/custom/Containerfile .
 ```
 
 ```shell
