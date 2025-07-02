@@ -29,7 +29,7 @@ Note:
 
 Generate base64 string from json file:
 
-go inside docs dir.
+scp the apps.json in the vm first. and clone the official repo.
 
 ```shell
 export APPS_JSON_BASE64=$(base64 -w 0 apps.json)
